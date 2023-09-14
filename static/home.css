@@ -1,0 +1,122 @@
+body {
+    background-image: url('./img/background01.png');
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+#section-pubs{
+    /*width: clamp(30em, 60vw, 50em);
+    height: clamp(1em, 30em, 100vh);*/
+    width: clamp(20em, 60vw, 50em);
+    height: clamp(10em, 60vh, 25em);
+    
+    margin: 0 auto;
+    position: relative;
+    background-color: antiquewhite;
+
+    /*intento 1*/
+   /* display: grid;
+    grid-template-rows: auto 1fr;*/
+
+    /*intento 2*/
+    display: flex;
+    flex-direction: column;
+}
+
+#pubs-container {
+    width: 100%;
+    text-align: center;
+    overflow-y: auto;
+
+    /*grid-row: 1;*/
+    flex-grow: 1;
+
+}
+.pubs {
+    background-color: rgb(255, 242, 224);
+    width: clamp(32%, 7em, 100%);
+    aspect-ratio: 1/1;
+    margin: .2em;
+    position: relative;
+    display: inline-block;
+}
+.pubs-content-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+}
+.titulo, .fecha {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 .4em .4em;
+}
+.descrip {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+    width: 100%; height: 100%;
+    text-align: left;
+    padding: .8em;
+    box-sizing: border-box;
+    overflow-y: auto;
+    
+}
+.titulo {
+    font-size: 1.2em;
+    background-color: var(--marron);
+
+}
+.fecha, .descrip {
+    font-size: .8em;
+    color: rgb(75, 75, 75)
+    ;
+}
+.img-container {
+    grid-row: 1; 
+    grid-column: 2; 
+    position: relative;
+    width: 100%;
+    height: 100%;
+  
+}
+.img-container .img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(1em, 10%, 3em);
+    aspect-ratio: 1/1;
+    bottom: 0; 
+
+    position: absolute;
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    margin: auto;
+     
+    background-color:#cda387;
+    border-radius: 50%;
+
+    /*grid-row: 2;*/
+
+}
+.btn-agregar-pub {
+    text-align: center;
+}
+@media only screen and (width<560px) {
+    .pubs {
+        width: 100%;
+    }
+}

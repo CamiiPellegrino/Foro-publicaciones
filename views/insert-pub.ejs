@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva publicación</title>
+    <link rel="stylesheet" href="static/general.css">
+    <link rel="stylesheet" href="static/insert-pub.css">
+
+</head>
+<body>
+    <form action="#" id="form-insert" class="container-form">
+        <label for="titulo">titulo</label>
+        <input type="text" id="titulo" name="titulo" class="input" placeholder="titulo" value="12/12/12">
+        <label for="descrip">Descripción</label>
+        <input type="text" id="descrip" name="descrip" class="input" placeholder="descrip" value="12/12/12">
+        <div class="container-par-input">
+            <div>
+                <label for="fecha">Fecha de publicación</label>
+                <input readonly type="date" id="fecha" name="fecha" class="input">
+            </div>
+            <div>
+                <label for="src">URL de imagen</label>
+                <input type="text" id="src" name="src" class="input" placeholder="Link">
+            </div>
+        </div>
+        <input type="submit" class="input" value="Agregar"></input>
+    </form>
+</body>
+<script src="static/insert-pub.js" type="module"></script>
+</html>
